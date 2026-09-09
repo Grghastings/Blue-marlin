@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>2026 State Assistance Tracker</title>
+  <meta name="description" content="Dashboard for 2026 U.S. Department of State grants, cooperative agreements, and pending opportunities relevant to Lexpat." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">LEXPAT • BUSINESS DEVELOPMENT</div>
+        <h1>2026 State Assistance Tracker</h1>
+        <p>Grants, cooperative agreements, and pending NOFOs across State bureaus — with a focus on where Lexpat can team.</p>
+      </div>
+      <div class="asof">Data as of <strong>September 9, 2026</strong></div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="kpis" class="kpis"></section>
+
+    <section class="panel controls">
+      <div class="control wide">
+        <label for="search">Search</label>
+        <input id="search" type="search" placeholder="Search opportunity, winner, ID, or keyword…" />
+      </div>
+      <div class="control">
+        <label for="bureau">Bureau</label>
+        <select id="bureau"><option value="">All bureaus</option></select>
+      </div>
+      <div class="control">
+        <label for="status">Status</label>
+        <select id="status"><option value="">All statuses</option></select>
+      </div>
+      <div class="control">
+        <label for="relevance">Lexpat relevance</label>
+        <select id="relevance"><option value="">All relevance</option></select>
+      </div>
+      <div class="control">
+        <label for="valueRange">Value</label>
+        <select id="valueRange">
+          <option value="">Any value</option>
+          <option value="500000-1000000">$500K–$1M</option>
+          <option value="1000000-3000000">$1M–$3M</option>
+          <option value="3000000-5000000">$3M–$5M</option>
+          <option value="5000000-999999999">$5M+</option>
+        </select>
+      </div>
+      <button id="reset" class="button">Reset</button>
+    </section>
+
+    <section class="split">
+      <div class="panel">
+        <div class="panel-head"><div><div class="eyebrow dark">PIPELINE</div><h2>Status mix</h2></div></div>
+        <div id="statusBars" class="bars"></div>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><div><div class="eyebrow dark">BUREAUS</div><h2>Where the activity sits</h2></div></div>
+        <div id="bureauBars" class="bars"></div>
+      </div>
+    </section>
+
+    <section class="panel table-panel">
+      <div class="panel-head table-head">
+        <div><div class="eyebrow dark">DETAIL</div><h2>Opportunities & awards</h2></div>
+        <div id="resultCount" class="muted"></div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th data-sort="bureau">Bureau</th>
+              <th data-sort="status">Status</th>
+              <th data-sort="title">Opportunity / Award</th>
+              <th data-sort="awardId">ID</th>
+              <th data-sort="ceiling">Value</th>
+              <th data-sort="winner">Winner</th>
+              <th data-sort="relevance">Lexpat</th>
+              <th>Source</th>
+            </tr>
+          </thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap footer">Built as a static GitHub Pages dashboard. Source links are preserved from the research tracker.</footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
