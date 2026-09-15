@@ -5,7 +5,7 @@ window.STATE_ASSISTANCE_DATA = [
     "status": "Closed - pending awards",
     "title": "2026 CTR Non-Proliferation Programming",
     "awardId": "DFOP0017675",
-    "instrument": "Grant / Cooperative Agreement",
+    "instrument": "Cooperative Agreement",
     "postedDate": "2026-01-08",
     "closeDate": "2026-03-06",
     "expectedStart": "2027-01-01",
@@ -15,7 +15,9 @@ window.STATE_ASSISTANCE_DATA = [
     "awardAmount": null,
     "relevance": "VERY HIGH",
     "why": "Massive umbrella competition covering nonproliferation, advanced technology, research security, sanctions and related capacity building.",
-    "source": "https://www.highergov.com/grant-opportunity/2026-ctr-non-proliferation-programing-361106/"
+    "source": "https://www.grants.gov/search-results-detail/361106",
+    "grantsGovId": 361106,
+    "opportunityUpdated": "Jan 08, 2026 01:37:59 PM EST"
   },
   {
     "id": 2,
@@ -51,7 +53,9 @@ window.STATE_ASSISTANCE_DATA = [
     "awardAmount": null,
     "relevance": "VERY HIGH",
     "why": "Probably the cleanest direct fit for Lexpat legal/regulatory, export-control and compliance support.",
-    "source": "https://simpler.grants.gov/opportunity/d93c97e0-c1cb-4515-8e36-b3dc57ea3559"
+    "source": "https://www.grants.gov/search-results-detail/362695",
+    "grantsGovId": 362695,
+    "opportunityUpdated": "Jun 05, 2026 11:34:26 AM EDT"
   },
   {
     "id": 4,
@@ -60,7 +64,7 @@ window.STATE_ASSISTANCE_DATA = [
     "title": "Data Analytics & AI to Counter Global Diversion",
     "awardId": "DFOP0018157",
     "instrument": "Cooperative Agreement",
-    "postedDate": "2026-06-23",
+    "postedDate": "2026-07-16",
     "closeDate": "2026-08-21",
     "expectedStart": "",
     "ceiling": 5901000,
@@ -69,14 +73,16 @@ window.STATE_ASSISTANCE_DATA = [
     "awardAmount": null,
     "relevance": "VERY HIGH",
     "why": "Combines export controls, data analytics, inspections, industry outreach and legal/compliance workstreams.",
-    "source": "https://www.grants.gov/search-results-detail/363221"
+    "source": "https://www.grants.gov/search-results-detail/363221",
+    "grantsGovId": 363221,
+    "opportunityUpdated": "Jul 16, 2026 02:56:41 PM EDT"
   },
   {
     "id": 5,
     "bureau": "ACN/EXBS",
     "status": "Closed - pending award",
     "title": "Protecting Critical Mineral Supply Chains / export controls and screening",
-    "awardId": "Not captured",
+    "awardId": "DFOP0018149",
     "instrument": "Cooperative Agreement",
     "postedDate": "2026-06-25",
     "closeDate": "2026-07-20",
@@ -87,7 +93,9 @@ window.STATE_ASSISTANCE_DATA = [
     "awardAmount": null,
     "relevance": "HIGH",
     "why": "Export controls, customs screening, investment screening and critical-minerals supply-chain security.",
-    "source": "https://www.grants.gov/search-results-detail/362963"
+    "source": "https://www.grants.gov/search-results-detail/362963",
+    "grantsGovId": 362963,
+    "opportunityUpdated": "Jun 25, 2026 06:17:19 AM EDT"
   },
   {
     "id": 6,
@@ -100,12 +108,14 @@ window.STATE_ASSISTANCE_DATA = [
     "closeDate": "2026-07-21",
     "expectedStart": "",
     "ceiling": 4000000,
-    "expectedAwards": "2-5",
+    "expectedAwards": 3,
     "winner": "TBD",
     "awardAmount": null,
     "relevance": "MEDIUM-HIGH",
     "why": "Potential legal/policy, governance, responsible technology and nonproliferation advisory role.",
-    "source": "https://apply07.grants.gov/grantsws/rest/opportunity/att/download/352383"
+    "source": "https://www.grants.gov/search-results-detail/362991",
+    "grantsGovId": 362991,
+    "opportunityUpdated": "Jun 29, 2026 11:04:52 AM EDT"
   },
   {
     "id": 7,
@@ -123,7 +133,10 @@ window.STATE_ASSISTANCE_DATA = [
     "awardAmount": 4933399,
     "relevance": "VERY HIGH",
     "why": "Near-perfect fit for AML/CFT, FIUs, law enforcement, prosecutors, judiciary and terrorist-finance work.",
-    "source": "https://www.highergov.com/grant/SAQMMA26CA0035/"
+    "source": "https://www.usaspending.gov/award/ASST_NON_SAQMMA26CA0035_019/",
+    "officialRecipient": "BANCROFT GLOBAL DEVELOPMENT",
+    "awardEnd": "2027-05-31",
+    "usaSpendingLastModified": "2026-06-05 17:56:58"
   },
   {
     "id": 8,
@@ -141,7 +154,9 @@ window.STATE_ASSISTANCE_DATA = [
     "awardAmount": null,
     "relevance": "VERY HIGH",
     "why": "Illicit finance, TCO/FTO networks, regulators, prosecutors and investigations align strongly with Lexpat.",
-    "source": "https://simpler.grants.gov/opportunity/a7a65140-5b9e-4665-9094-ab6e2058dba8"
+    "source": "https://www.grants.gov/search-results-detail/363068",
+    "grantsGovId": 363068,
+    "opportunityUpdated": "Jul 06, 2026 09:48:40 AM EDT"
   },
   {
     "id": 9,
@@ -159,7 +174,9 @@ window.STATE_ASSISTANCE_DATA = [
     "awardAmount": null,
     "relevance": "HIGH",
     "why": "Investigations, legal frameworks, law-enforcement capacity and emerging-tech policy components may fit.",
-    "source": "https://www.grants.gov/search-results-detail/362904"
+    "source": "https://www.grants.gov/search-results-detail/362904",
+    "grantsGovId": 362904,
+    "opportunityUpdated": "Jun 22, 2026 12:53:47 PM EDT"
   },
   {
     "id": 10,
@@ -186,7 +203,7 @@ window.STATE_ASSISTANCE_DATA = [
     "title": "Preventing Iranian Proxy and ISIS Activities Along Iraq’s Western Border",
     "awardId": "DFOP0018090",
     "instrument": "Cooperative Agreement",
-    "postedDate": "2026-04-01",
+    "postedDate": "2026-04-29",
     "closeDate": "2026-06-08",
     "expectedStart": "2026-09-30",
     "ceiling": 6808090,
@@ -195,7 +212,9 @@ window.STATE_ASSISTANCE_DATA = [
     "awardAmount": null,
     "relevance": "VERY HIGH",
     "why": "Direct overlap with Lexpat Iraq, Iran-aligned militia, CT, investigations and institutional-capacity work.",
-    "source": "https://www.scribd.com/document/1057699580/FP-NOFO-Preventing-Iranian-Proxy-and-ISIS-Activities-Along-Iraqs-Western-Border-UPD-1"
+    "source": "https://www.grants.gov/search-results-detail/362131",
+    "grantsGovId": 362131,
+    "opportunityUpdated": "Apr 29, 2026 02:18:50 PM EDT"
   },
   {
     "id": 12,
@@ -213,7 +232,9 @@ window.STATE_ASSISTANCE_DATA = [
     "awardAmount": null,
     "relevance": "MEDIUM",
     "why": "Security-sector capacity and regional implementation; legal/compliance support possible but less core.",
-    "source": "https://simpler.grants.gov/opportunity/f8162f82-9b22-4cff-8116-df3359c63da2"
+    "source": "https://www.grants.gov/search-results-detail/363231",
+    "grantsGovId": 363231,
+    "opportunityUpdated": "Jul 17, 2026 02:59:05 PM EDT"
   },
   {
     "id": 13,
@@ -231,7 +252,9 @@ window.STATE_ASSISTANCE_DATA = [
     "awardAmount": null,
     "relevance": "VERY HIGH",
     "why": "Core Lexpat lane: evidence, accountability, sanctions, visa restrictions, investigations and legal analysis.",
-    "source": "https://simpler.grants.gov/opportunity/5556a458-5a88-4c19-935e-0d2c5e65962b"
+    "source": "https://www.grants.gov/search-results-detail/363211",
+    "grantsGovId": 363211,
+    "opportunityUpdated": "Jul 16, 2026 11:10:43 AM EDT"
   },
   {
     "id": 14,
@@ -249,7 +272,9 @@ window.STATE_ASSISTANCE_DATA = [
     "awardAmount": null,
     "relevance": "HIGH",
     "why": "Human-rights protection and emergency mechanisms; possible legal/protection/risk-advisory role.",
-    "source": "https://simpler.grants.gov/opportunity/9ad3449c-8966-4569-be94-f3881a0020c0"
+    "source": "https://www.grants.gov/search-results-detail/363780",
+    "grantsGovId": 363780,
+    "opportunityUpdated": "Sep 01, 2026 03:44:04 PM EDT"
   },
   {
     "id": 15,
@@ -267,7 +292,9 @@ window.STATE_ASSISTANCE_DATA = [
     "awardAmount": null,
     "relevance": "HIGH",
     "why": "Rapid response, local partners, democracy and human-rights programming; possible specialist teaming role.",
-    "source": "https://simpler.grants.gov/opportunity/b8a50d7d-af4e-4671-ba2c-15b9f3491e1b"
+    "source": "https://www.grants.gov/search-results-detail/363646",
+    "grantsGovId": 363646,
+    "opportunityUpdated": "Aug 18, 2026 02:34:51 PM EDT"
   },
   {
     "id": 16,
@@ -285,7 +312,9 @@ window.STATE_ASSISTANCE_DATA = [
     "awardAmount": null,
     "relevance": "VERY HIGH",
     "why": "Rule of law, policy and legal analysis are central Lexpat capabilities.",
-    "source": "https://www.grants.gov/search-results-detail/363595"
+    "source": "https://www.grants.gov/search-results-detail/363595",
+    "grantsGovId": 363595,
+    "opportunityUpdated": "Aug 14, 2026 09:24:52 AM EDT"
   },
   {
     "id": 17,
@@ -303,7 +332,9 @@ window.STATE_ASSISTANCE_DATA = [
     "awardAmount": null,
     "relevance": "VERY HIGH",
     "why": "Judicial, documentation and legal-accountability work aligns closely with Lexpat.",
-    "source": "https://www.grants.gov/search-results-detail/363259"
+    "source": "https://www.grants.gov/search-results-detail/363259",
+    "grantsGovId": 363259,
+    "opportunityUpdated": "Jul 21, 2026 10:05:42 AM EDT"
   },
   {
     "id": 18,
@@ -311,7 +342,7 @@ window.STATE_ASSISTANCE_DATA = [
     "status": "Closed - pending award",
     "title": "TNR: investigate infiltration of diaspora communities by faith-based or quasi-government organizations",
     "awardId": "DFOP0019655",
-    "instrument": "Cooperative Agreement",
+    "instrument": "Grant",
     "postedDate": "2026-08-04",
     "closeDate": "2026-08-10",
     "expectedStart": "",
@@ -321,14 +352,16 @@ window.STATE_ASSISTANCE_DATA = [
     "awardAmount": null,
     "relevance": "HIGH",
     "why": "Investigations, evidence development and policy recommendations align with Lexpat capabilities.",
-    "source": "https://www.grants.gov/search-results-detail/363465"
+    "source": "https://www.grants.gov/search-results-detail/363465",
+    "grantsGovId": 363465,
+    "opportunityUpdated": "Aug 04, 2026 05:00:47 PM EDT"
   },
   {
     "id": 19,
     "bureau": "DRL",
     "status": "Closed - pending award",
     "title": "Track 2.0 Peacebuilding Rapid Response Mechanism",
-    "awardId": "Not captured",
+    "awardId": "DFOP0019287",
     "instrument": "Cooperative Agreement",
     "postedDate": "2026-07-15",
     "closeDate": "2026-08-13",
@@ -339,7 +372,9 @@ window.STATE_ASSISTANCE_DATA = [
     "awardAmount": null,
     "relevance": "MEDIUM-HIGH",
     "why": "Conflict/peacebuilding and convening; teaming fit strongest if legal/accountability elements are needed.",
-    "source": "https://www.grants.gov/search-results-detail/363202"
+    "source": "https://www.grants.gov/search-results-detail/363202",
+    "grantsGovId": 363202,
+    "opportunityUpdated": "Jul 15, 2026 04:45:01 PM EDT"
   },
   {
     "id": 20,
@@ -348,16 +383,18 @@ window.STATE_ASSISTANCE_DATA = [
     "title": "Securing Convictions from Vetted and Special Unit Operations - Mexico",
     "awardId": "OFOP0002421",
     "instrument": "Cooperative Agreement",
-    "postedDate": "2026-01-12",
+    "postedDate": "2026-03-02",
     "closeDate": "2026-03-20",
     "expectedStart": "2026-04-01",
-    "ceiling": 4000000,
-    "expectedAwards": "Up to 4",
+    "ceiling": 1500000,
+    "expectedAwards": 4,
     "winner": "TBD",
     "awardAmount": null,
     "relevance": "VERY HIGH",
     "why": "Prosecution, investigations, case-building and criminal justice capacity are direct fits.",
-    "source": "https://apply07.grants.gov/grantsws/rest/opportunity/att/download/350347"
+    "source": "https://www.grants.gov/search-results-detail/361388",
+    "grantsGovId": 361388,
+    "opportunityUpdated": "Mar 02, 2026 03:32:43 PM EST"
   },
   {
     "id": 21,
@@ -375,14 +412,16 @@ window.STATE_ASSISTANCE_DATA = [
     "awardAmount": null,
     "relevance": "VERY HIGH",
     "why": "Illicit finance, corruption, prosecutors and investigative mentoring align almost exactly with Lexpat.",
-    "source": "https://simpler.grants.gov/opportunity/e98b22fa-6e0e-4e86-a06e-50a852201711"
+    "source": "https://www.grants.gov/search-results-detail/362805",
+    "grantsGovId": 362805,
+    "opportunityUpdated": "Jun 15, 2026 11:03:52 AM EDT"
   },
   {
     "id": 22,
     "bureau": "INL",
     "status": "Closed - pending award",
     "title": "Technical Assistance to Combat TCOs and Prevent FTO Operations in SCC Partner Countries",
-    "awardId": "Not captured",
+    "awardId": "DFOP0019393",
     "instrument": "Cooperative Agreement",
     "postedDate": "2026-07-16",
     "closeDate": "2026-08-17",
@@ -393,7 +432,9 @@ window.STATE_ASSISTANCE_DATA = [
     "awardAmount": null,
     "relevance": "HIGH",
     "why": "Law enforcement, criminal justice and TCO/FTO technical assistance align with Lexpat.",
-    "source": "https://www.grants.gov/search-results-detail/363218"
+    "source": "https://www.grants.gov/search-results-detail/363218",
+    "grantsGovId": 363218,
+    "opportunityUpdated": "Jul 16, 2026 12:54:54 PM EDT"
   },
   {
     "id": 23,
@@ -411,7 +452,10 @@ window.STATE_ASSISTANCE_DATA = [
     "awardAmount": 5000000,
     "relevance": "MEDIUM",
     "why": "Useful partner ecosystem for security-sector and conventional weapons work; less direct than legal/AML lanes.",
-    "source": "https://govtribe.com/award/federal-grant-award/cooperative-agreement-spmwra26ca0004"
+    "source": "https://www.usaspending.gov/award/ASST_NON_SPMWRA26CA0004_019/",
+    "officialRecipient": "NORSK FOLKEHJELP",
+    "awardEnd": "2027-07-31",
+    "usaSpendingLastModified": "2026-02-09 18:56:26"
   },
   {
     "id": 24,
@@ -429,7 +473,10 @@ window.STATE_ASSISTANCE_DATA = [
     "awardAmount": 5000000,
     "relevance": "MEDIUM",
     "why": "Relevant to Colombia and security-sector networks; potential policy/legal or monitoring support.",
-    "source": "https://govtribe.com/award/federal-grant-award/project-grant-spmwra26gr0006?recommendationType=similar_recommendations"
+    "source": "https://www.usaspending.gov/award/ASST_NON_SPMWRA26GR0006_019/",
+    "officialRecipient": "ASOCIACION CAMPANA COLOMBIANA CONTRA MINAS CCCM",
+    "awardEnd": "2027-05-31",
+    "usaSpendingLastModified": "2026-05-22 22:19:20"
   },
   {
     "id": 25,
@@ -447,7 +494,10 @@ window.STATE_ASSISTANCE_DATA = [
     "awardAmount": 2783981,
     "relevance": "HIGH",
     "why": "Shows CRDF remains an active 2026 State assistance winner and a live teaming target.",
-    "source": "https://www.highergov.com/grant/SECAGD26CA0013/"
+    "source": "https://www.usaspending.gov/award/ASST_NON_SECAGD26CA0013_019/",
+    "officialRecipient": "U.S. CIVILIAN RESEARCH AND DEVELOPMENT FOUNDATION",
+    "awardEnd": "2029-01-01",
+    "usaSpendingLastModified": "2026-08-21 18:37:48"
   },
   {
     "id": 26,
@@ -462,10 +512,13 @@ window.STATE_ASSISTANCE_DATA = [
     "ceiling": 2512833,
     "expectedAwards": 1,
     "winner": "FHI 360",
-    "awardAmount": 2512833,
+    "awardAmount": 4885504,
     "relevance": "MEDIUM",
     "why": "Large implementer with active State assistance portfolio; useful as a teaming target for specialist work.",
-    "source": "https://govtribe.com/award/federal-grant-award/cooperative-agreement-secagd26ca0015"
+    "source": "https://www.usaspending.gov/award/ASST_NON_SECAGD26CA0015_019/",
+    "officialRecipient": "FAMILY HEALTH INTERNATIONAL",
+    "awardEnd": "2029-01-01",
+    "usaSpendingLastModified": "2026-09-10 18:45:09"
   },
   {
     "id": 27,
@@ -480,10 +533,13 @@ window.STATE_ASSISTANCE_DATA = [
     "ceiling": 1880000,
     "expectedAwards": 1,
     "winner": "Cultural Vistas",
-    "awardAmount": 1880000,
+    "awardAmount": 3962249,
     "relevance": "LOW-MEDIUM",
     "why": "Active ECA implementer; less direct capability overlap but potential niche legal/policy programming.",
-    "source": "https://govtribe.com/award/federal-grant-award/cooperative-agreement-secagd26ca0014"
+    "source": "https://www.usaspending.gov/award/ASST_NON_SECAGD26CA0014_019/",
+    "officialRecipient": "CULTURAL VISTAS, INC.",
+    "awardEnd": "2029-01-01",
+    "usaSpendingLastModified": "2026-09-10 18:45:09"
   },
   {
     "id": 28,
@@ -498,10 +554,13 @@ window.STATE_ASSISTANCE_DATA = [
     "ceiling": 1445637,
     "expectedAwards": 1,
     "winner": "World Learning",
-    "awardAmount": 1445637,
+    "awardAmount": 4335000,
     "relevance": "MEDIUM",
     "why": "Active international implementer with broad State footprint; potential specialist teaming partner.",
-    "source": "https://govtribe.com/award/federal-grant-award/cooperative-agreement-secagd26ca0007"
+    "source": "https://www.usaspending.gov/award/ASST_NON_SECAGD26CA0007_019/",
+    "officialRecipient": "WORLD LEARNING INC.",
+    "awardEnd": "2030-10-01",
+    "usaSpendingLastModified": "2026-06-22 17:02:03"
   },
   {
     "id": 29,
@@ -516,15 +575,18 @@ window.STATE_ASSISTANCE_DATA = [
     "ceiling": 600348,
     "expectedAwards": 1,
     "winner": "IREX",
-    "awardAmount": 600348,
+    "awardAmount": 6720000,
     "relevance": "MEDIUM",
     "why": "IREX is an active State grantee and potential partner for governance, research-security or institutional work.",
-    "source": "https://govtribe.com/award/federal-grant-award/cooperative-agreement-secagd26ca0005"
+    "source": "https://www.usaspending.gov/award/ASST_NON_SECAGD26CA0005_019/",
+    "officialRecipient": "INTERNATIONAL RESEARCH AND EXCHANGES BOARD INC.",
+    "awardEnd": "2030-05-01",
+    "usaSpendingLastModified": "2026-05-22 22:19:20"
   },
   {
     "id": 30,
     "bureau": "ECA",
-    "status": "Closed - pending award",
+    "status": "Archived - award not verified",
     "title": "FY 2026 Community Solutions Program",
     "awardId": "DFOP0018816",
     "instrument": "Cooperative Agreement",
@@ -537,17 +599,19 @@ window.STATE_ASSISTANCE_DATA = [
     "awardAmount": null,
     "relevance": "LOW-MEDIUM",
     "why": "Less direct fit, but useful for tracking active international implementation organizations.",
-    "source": "https://simpler.grants.gov/es/opportunity/10df393e-aa20-4fab-bf25-f51a9cd00f34"
+    "source": "https://www.grants.gov/search-results-detail/362944",
+    "grantsGovId": 362944,
+    "opportunityUpdated": "Jun 24, 2026 12:52:24 PM EDT"
   },
   {
     "id": 31,
     "bureau": "ECA",
-    "status": "Closed - pending award",
+    "status": "Archived - award not verified",
     "title": "FY 2026 Strengthening Talent, Research, Innovation and Vital Engagement (STRIVE)",
     "awardId": "DFOP0018335",
     "instrument": "Cooperative Agreement",
     "postedDate": "2026-05-12",
-    "closeDate": "2026-07-10",
+    "closeDate": "2026-06-10",
     "expectedStart": "",
     "ceiling": 2000000,
     "expectedAwards": 1,
@@ -555,12 +619,14 @@ window.STATE_ASSISTANCE_DATA = [
     "awardAmount": null,
     "relevance": "MEDIUM",
     "why": "Research/innovation and institutional partnerships could overlap with nonproliferation and tech-security work.",
-    "source": "https://simpler.grants.gov/opportunity/72d60fc4-f2a8-4aed-9e02-b0ecdf46f0b3"
+    "source": "https://www.grants.gov/search-results-detail/362356",
+    "grantsGovId": 362356,
+    "opportunityUpdated": "May 12, 2026 09:13:25 AM EDT"
   },
   {
     "id": 32,
     "bureau": "ECA",
-    "status": "Closed - pending award",
+    "status": "Archived - award not verified",
     "title": "FY 2026 Community Engagement Exchange",
     "awardId": "DFOP0018606",
     "instrument": "Cooperative Agreement",
@@ -573,6 +639,17 @@ window.STATE_ASSISTANCE_DATA = [
     "awardAmount": null,
     "relevance": "LOW-MEDIUM",
     "why": "Useful mainly to identify active ECA implementers and potential broad teaming partners.",
-    "source": "https://www.highergov.com/document/fy-2026-community-engagement-exchange-nofo-pdf-352908/"
+    "source": "https://www.grants.gov/search-results-detail/362751",
+    "grantsGovId": 362751,
+    "opportunityUpdated": "Jun 10, 2026 12:25:27 PM EDT"
   }
 ];
+
+window.STATE_ASSISTANCE_META = {
+  "asOf": "September 15, 2026",
+  "lastChecked": "2026-09-15",
+  "sources": [
+    "Grants.gov",
+    "USAspending.gov"
+  ]
+};

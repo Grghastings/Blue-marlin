@@ -1,15 +1,19 @@
 const DATA = window.STATE_ASSISTANCE_DATA || [];
+const META = window.STATE_ASSISTANCE_META || {};
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
 const money = n => n == null || n === '' ? '—' : new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',notation: n>=1e6?'compact':'standard',maximumFractionDigits:n>=1e6?2:0}).format(Number(n));
 const val = r => Number(r.awardAmount || r.ceiling || 0);
 let sortKey='postedDate', sortDir=-1;
 
+if (META.asOf && $('#dataAsOf')) $('#dataAsOf').textContent = META.asOf;
+
 function uniq(key){return [...new Set(DATA.map(d=>d[key]).filter(Boolean))].sort()}
 function addOptions(id,key){const s=$(id);uniq(key).forEach(v=>{const o=document.createElement('option');o.value=v;o.textContent=v;s.appendChild(o)})}
 addOptions('#bureau','bureau'); addOptions('#status','status'); addOptions('#relevance','relevance');
 
-function statusClass(s){s=s.toLowerCase();if(s.includes('award'))return 'status-awarded';if(s.includes('pending')||s.includes('closed'))return 'status-pending';return 'status-open'}
+function isPendingStatus(s){s=s.toLowerCase();return s.includes('pending')||s.includes('closed')||s.includes('archived')}
+function statusClass(s){s=s.toLowerCase();if(s.includes('awarded'))return 'status-awarded';if(isPendingStatus(s))return 'status-pending';return 'status-open'}
 function relClass(s){s=s.toLowerCase().replaceAll(' ','-');return 'rel-'+s}
 function filterData(){
   const q=$('#search').value.trim().toLowerCase(), bureau=$('#bureau').value, status=$('#status').value, rel=$('#relevance').value, range=$('#valueRange').value;
@@ -26,7 +30,7 @@ function filterData(){
 }
 function renderKpis(rows){
   const awarded=rows.filter(r=>r.status.toLowerCase().includes('award'));
-  const pending=rows.filter(r=>r.status.toLowerCase().includes('pending')||r.status.toLowerCase().includes('closed'));
+  const pending=rows.filter(r=>isPendingStatus(r.status));
   const high=rows.filter(r=>r.relevance==='VERY HIGH').length;
   const total=awarded.reduce((s,r)=>s+Number(r.awardAmount||0),0);
   const cards=[['Tracked records',rows.length,'Current filtered view'],['Confirmed awards',awarded.length,money(total)+' awarded'],['Pending / closed',pending.length,'Awaiting recipient publication'],['Very high relevance',high,'Top Lexpat targets']];
