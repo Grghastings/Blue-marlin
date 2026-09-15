@@ -51,6 +51,19 @@ class UpdateProcurementTests(unittest.TestCase):
             )
         )
 
+    def test_normalize_sam_rejects_award_notice(self):
+        self.assertIsNone(
+            normalize_sam(
+                {
+                    "noticeId": "award",
+                    "title": "Awarded contract",
+                    "type": "Award Notice",
+                    "active": "Yes",
+                },
+                self.today,
+            )
+        )
+
     def test_normalize_world_bank_open_notice(self):
         record = normalize_world_bank(
             {

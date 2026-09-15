@@ -1,7 +1,6 @@
-const STATE_DATA = (window.STATE_ASSISTANCE_DATA || []).map(r=>({...r,sourceSystem:r.sourceSystem||'State assistance'}));
 const PROCUREMENT_DATA = window.PROCUREMENT_DATA || [];
-const DATA = [...PROCUREMENT_DATA,...STATE_DATA];
-const META = window.PROCUREMENT_META || window.STATE_ASSISTANCE_META || {};
+const DATA = PROCUREMENT_DATA;
+const META = window.PROCUREMENT_META || {};
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
 const money = n => n == null || n === '' ? '—' : new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',notation: n>=1e6?'compact':'standard',maximumFractionDigits:n>=1e6?2:0}).format(Number(n));
@@ -34,10 +33,7 @@ function renderKpis(rows){
   const procurement=rows.filter(r=>r.sourceSystem==='SAM.gov'||r.sourceSystem==='World Bank');
   const sam=rows.filter(r=>r.sourceSystem==='SAM.gov').length;
   const worldBank=rows.filter(r=>r.sourceSystem==='World Bank').length;
-  const awarded=rows.filter(r=>r.sourceSystem==='State assistance'&&r.status.toLowerCase().includes('award'));
-  const total=awarded.reduce((s,r)=>s+Number(r.awardAmount||0),0);
   const cards=[['Tracked records',rows.length,'Current filtered view'],['Open procurement',procurement.length,'SAM.gov + World Bank'],['SAM.gov',sam,'Federal opportunities'],['World Bank',worldBank,'Project opportunities']];
-  if(!procurement.length&&awarded.length) cards[1]=['Confirmed awards',awarded.length,money(total)+' awarded'];
   $('#kpis').innerHTML=cards.map(c=>`<div class="kpi"><div class="label">${esc(c[0])}</div><div class="value">${esc(c[1])}</div><div class="sub">${esc(c[2])}</div></div>`).join('');
 }
 function renderBars(rows,key,target){

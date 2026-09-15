@@ -1,6 +1,11 @@
 name: Daily dashboard update
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/daily-update.yml"
+      - "scripts/update_procurement.py"
   schedule:
     - cron: "17 10 * * *"
   workflow_dispatch:
@@ -28,9 +33,7 @@ jobs:
       - name: Refresh public data
         env:
           SAM_API_KEY: ${{ secrets.SAM_API_KEY }}
-        run: |
-          python scripts/update_data.py
-          python scripts/update_procurement.py
+        run: python scripts/update_procurement.py
 
       - name: Run tests
         run: python -m unittest discover -s tests -v
@@ -40,7 +43,7 @@ jobs:
 
       - name: Commit updated dashboard data
         run: |
-          git add data.js procurement.js
+          git add procurement.js
           if git diff --cached --quiet; then
             echo "No dashboard changes to commit."
             exit 0

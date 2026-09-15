@@ -59,9 +59,13 @@ def iso_date(value: Any) -> str:
 def normalize_sam(item: dict[str, Any], checked_on: date) -> dict[str, Any] | None:
     notice_id = str(item.get("noticeId") or "").strip()
     title = str(item.get("title") or "").strip()
-    deadline = iso_date(item.get("responseDeadLine"))
+    deadline = iso_date(item.get("responseDeadLine") or item.get("reponseDeadLine"))
     active = str(item.get("active") or item.get("status") or "").casefold()
+    notice_type = str(item.get("type") or item.get("baseType") or "Procurement notice")
+    excluded = {"award notice", "justification", "sale of surplus property"}
     if not notice_id or not title:
+        return None
+    if notice_type.casefold() in excluded:
         return None
     if deadline and deadline < checked_on.isoformat():
         return None
@@ -76,7 +80,6 @@ def normalize_sam(item: dict[str, Any], checked_on: date) -> dict[str, Any] | No
     )
     solicitation = str(item.get("solicitationNumber") or notice_id)
     set_aside = item.get("typeOfSetAsideDescription") or item.get("typeOfSetAside") or ""
-    notice_type = item.get("type") or item.get("baseType") or "Procurement notice"
     source = item.get("uiLink") or f"https://sam.gov/opp/{notice_id}/view"
     return {
         "sourceSystem": "SAM.gov",
@@ -131,17 +134,25 @@ def normalize_world_bank(item: dict[str, Any], checked_on: date) -> dict[str, An
 
 
 def fetch_sam(checked_on: date, api_key: str) -> list[dict[str, Any]]:
-    response = request_json(
-        SAM_URL,
-        {
-            "api_key": api_key,
-            "postedFrom": (checked_on - timedelta(days=90)).strftime("%m/%d/%Y"),
-            "postedTo": checked_on.strftime("%m/%d/%Y"),
-            "limit": 1000,
-            "offset": 0,
-        },
-    )
-    records = [normalize_sam(item, checked_on) for item in response.get("opportunitiesData", [])]
+    params = {
+        "api_key": api_key,
+        "postedFrom": (checked_on - timedelta(days=90)).strftime("%m/%d/%Y"),
+        "postedTo": checked_on.strftime("%m/%d/%Y"),
+        "rdlfrom": checked_on.strftime("%m/%d/%Y"),
+        "rdlto": (checked_on + timedelta(days=365)).strftime("%m/%d/%Y"),
+        "limit": 1000,
+    }
+    raw: list[dict[str, Any]] = []
+    offset = 0
+    while offset < 25000:
+        response = request_json(SAM_URL, {**params, "offset": offset})
+        page = response.get("opportunitiesData", [])
+        raw.extend(page)
+        total = int(response.get("totalRecords") or len(raw))
+        if not page or len(raw) >= total or len(page) < params["limit"]:
+            break
+        offset += params["limit"]
+    records = [normalize_sam(item, checked_on) for item in raw]
     return newest_unique([record for record in records if record], MAX_RECORDS_PER_SOURCE)
 
 

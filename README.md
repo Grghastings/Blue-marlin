@@ -1,6 +1,6 @@
 # Lexpat Opportunity Tracker
 
-A no-build, static dashboard for open SAM.gov and World Bank procurement opportunities, plus 2026 U.S. Department of State assistance and awards.
+A no-build, static dashboard for open SAM.gov and World Bank procurement opportunities.
 
 ## GitHub Pages deployment
 
@@ -15,16 +15,12 @@ No npm, build tooling, or server is required.
 
 ## Updating the data
 
-The dashboard reads from `data.js` and `procurement.js`. A GitHub Actions workflow refreshes both daily and can also be run manually from **Actions → Daily dashboard update → Run workflow**.
+The dashboard reads from `procurement.js`. A GitHub Actions workflow refreshes it daily and can also be run manually from **Actions → Daily dashboard update → Run workflow**.
 
-The updater uses official public sources:
+The updater uses official procurement sources:
 
-- Grants.gov refreshes the status, dates, ceiling, instrument, and other details for each tracked funding opportunity.
-- USAspending.gov refreshes verified awards by exact federal award ID, including the current obligated amount and official recipient name.
-- World Bank's Procurement Notice dataset supplies current project procurement notices. Contract awards, procurement plans, and expired notices are excluded.
 - SAM.gov supplies active federal contract opportunities posted within the last 90 days.
-
-The matching is intentionally conservative. A Grants.gov opportunity number is not necessarily the same as the eventual federal award ID, so the updater does not guess recipients. When a pending opportunity is awarded, add its USAspending award ID as `usaSpendingAwardId` on the record; the next run will verify and refresh it.
+- World Bank's Procurement Notice dataset supplies current project procurement notices. Contract awards, procurement plans, and expired notices are excluded.
 
 ## SAM.gov API key
 
@@ -42,9 +38,8 @@ Never put the API key in a source file. If the secret is missing, the updater st
 - `index.html` — dashboard structure
 - `styles.css` — responsive styling
 - `app.js` — filters, sorting, KPI calculations, and charts
-- `data.js` — current tracker data
 - `procurement.js` — generated SAM.gov and World Bank opportunities
 
 ## Data scope
 
-The date shown in the dashboard header is written after each successful refresh. Source URLs are replaced with the corresponding official Grants.gov or USAspending.gov record when available.
+The date shown in the dashboard header is written after each successful refresh. Every row links back to its official SAM.gov or World Bank procurement notice.
