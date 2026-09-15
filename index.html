@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>2026 State Assistance Tracker</title>
-  <meta name="description" content="Dashboard for 2026 U.S. Department of State grants, cooperative agreements, and pending opportunities relevant to Lexpat." />
+  <title>Lexpat Opportunity Tracker</title>
+  <meta name="description" content="Dashboard for SAM.gov and World Bank procurement opportunities plus U.S. Department of State assistance." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -12,8 +12,8 @@
     <div class="wrap hero-grid">
       <div>
         <div class="eyebrow">LEXPAT • BUSINESS DEVELOPMENT</div>
-        <h1>2026 State Assistance Tracker</h1>
-        <p>Grants, cooperative agreements, and pending NOFOs across State bureaus — with a focus on where Lexpat can team.</p>
+        <h1>Opportunity Tracker</h1>
+        <p>Open procurement opportunities from SAM.gov and the World Bank, alongside U.S. Department of State assistance and awards.</p>
       </div>
       <div class="asof">Data as of <strong id="dataAsOf">September 9, 2026</strong></div>
     </div>
@@ -25,11 +25,15 @@
     <section class="panel controls">
       <div class="control wide">
         <label for="search">Search</label>
-        <input id="search" type="search" placeholder="Search opportunity, winner, ID, or keyword…" />
+        <input id="search" type="search" placeholder="Try legal, governance, cybersecurity, country, agency, or ID…" />
       </div>
       <div class="control">
-        <label for="bureau">Bureau</label>
-        <select id="bureau"><option value="">All bureaus</option></select>
+        <label for="sourceSystem">Source</label>
+        <select id="sourceSystem"><option value="">All sources</option></select>
+      </div>
+      <div class="control">
+        <label for="bureau">Agency / country</label>
+        <select id="bureau"><option value="">All agencies &amp; countries</option></select>
       </div>
       <div class="control">
         <label for="status">Status</label>
@@ -58,8 +62,8 @@
         <div id="statusBars" class="bars"></div>
       </div>
       <div class="panel">
-        <div class="panel-head"><div><div class="eyebrow dark">BUREAUS</div><h2>Where the activity sits</h2></div></div>
-        <div id="bureauBars" class="bars"></div>
+        <div class="panel-head"><div><div class="eyebrow dark">SOURCES</div><h2>Where opportunities come from</h2></div></div>
+        <div id="sourceBars" class="bars"></div>
       </div>
     </section>
 
@@ -72,12 +76,13 @@
         <table>
           <thead>
             <tr>
-              <th data-sort="bureau">Bureau</th>
+              <th data-sort="bureau">Agency / Country</th>
+              <th data-sort="sourceSystem">Source</th>
               <th data-sort="status">Status</th>
               <th data-sort="title">Opportunity / Award</th>
               <th data-sort="awardId">ID</th>
               <th data-sort="ceiling">Value</th>
-              <th data-sort="winner">Winner</th>
+              <th data-sort="closeDate">Deadline</th>
               <th data-sort="relevance">Lexpat</th>
               <th>Source</th>
             </tr>
@@ -88,9 +93,10 @@
     </section>
   </main>
 
-  <footer class="wrap footer">Built as a static GitHub Pages dashboard. Source links are preserved from the research tracker.</footer>
+  <footer class="wrap footer">Updated daily from official public data. Always confirm requirements and deadlines on the linked source notice.</footer>
 
   <script src="data.js"></script>
+  <script src="procurement.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
