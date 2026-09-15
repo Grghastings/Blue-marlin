@@ -1,6 +1,6 @@
-# Lexpat Opportunity Tracker
+# 2026 State Assistance Tracker
 
-A no-build, static dashboard for open SAM.gov and World Bank procurement opportunities.
+A no-build, static dashboard for 2026 U.S. Department of State grants, cooperative agreements, and pending NOFOs relevant to Lexpat business development.
 
 ## GitHub Pages deployment
 
@@ -15,31 +15,22 @@ No npm, build tooling, or server is required.
 
 ## Updating the data
 
-The dashboard reads from `procurement.js`. A GitHub Actions workflow refreshes it daily and can also be run manually from **Actions → Daily dashboard update → Run workflow**.
+The dashboard reads from `data.js`. A GitHub Actions workflow refreshes it daily and can also be run manually from **Actions → Daily dashboard update → Run workflow**.
 
-The updater uses official procurement sources:
+The updater uses official public sources:
 
-- SAM.gov supplies active federal contract opportunities posted within the last 90 days.
-- World Bank's Procurement Notice dataset supplies current project procurement notices. Contract awards, procurement plans, and expired notices are excluded.
+- Grants.gov refreshes the status, dates, ceiling, instrument, and other details for each tracked funding opportunity.
+- USAspending.gov refreshes verified awards by exact federal award ID, including the current obligated amount and official recipient name.
 
-## SAM.gov API key
-
-SAM.gov requires an API key. Add it to the repository as an Actions secret named exactly `SAM_API_KEY`:
-
-1. Open **Settings → Secrets and variables → Actions**.
-2. Select **New repository secret**.
-3. Enter `SAM_API_KEY` as the name and paste the key as the value.
-4. Save it, then run **Actions → Daily dashboard update → Run workflow**.
-
-Never put the API key in a source file. If the secret is missing, the updater still refreshes World Bank and State assistance data and reports that SAM.gov is waiting for the secret.
+The matching is intentionally conservative. A Grants.gov opportunity number is not necessarily the same as the eventual federal award ID, so the updater does not guess recipients. When a pending opportunity is awarded, add its USAspending award ID as `usaSpendingAwardId` on the record; the next run will verify and refresh it. No API keys or repository secrets are required.
 
 ## Files
 
 - `index.html` — dashboard structure
 - `styles.css` — responsive styling
 - `app.js` — filters, sorting, KPI calculations, and charts
-- `procurement.js` — generated SAM.gov and World Bank opportunities
+- `data.js` — current tracker data
 
 ## Data scope
 
-The date shown in the dashboard header is written after each successful refresh. Every row links back to its official SAM.gov or World Bank procurement notice.
+The date shown in the dashboard header is written after each successful refresh. Source URLs are replaced with the corresponding official Grants.gov or USAspending.gov record when available.
