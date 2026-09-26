@@ -136,7 +136,7 @@ window.STATE_ASSISTANCE_DATA = [
     "source": "https://www.usaspending.gov/award/ASST_NON_SAQMMA26CA0035_019/",
     "officialRecipient": "BANCROFT GLOBAL DEVELOPMENT",
     "awardEnd": "2027-05-31",
-    "usaSpendingLastModified": "2026-06-05 17:56:58"
+    "usaSpendingLastModified": "2026-09-26 00:07:25"
   },
   {
     "id": 8,
@@ -646,8 +646,8 @@ window.STATE_ASSISTANCE_DATA = [
 ];
 
 window.STATE_ASSISTANCE_META = {
-  "asOf": "September 25, 2026",
-  "lastChecked": "2026-09-25",
+  "asOf": "September 26, 2026",
+  "lastChecked": "2026-09-26",
   "sources": [
     "Grants.gov",
     "USAspending.gov"
