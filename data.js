@@ -646,8 +646,8 @@ window.STATE_ASSISTANCE_DATA = [
 ];
 
 window.STATE_ASSISTANCE_META = {
-  "asOf": "November 5, 2026",
-  "lastChecked": "2026-11-05",
+  "asOf": "November 6, 2026",
+  "lastChecked": "2026-11-06",
   "sources": [
     "Grants.gov",
     "USAspending.gov"
